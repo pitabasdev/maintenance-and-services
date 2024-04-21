@@ -1,0 +1,46 @@
+/* HomeAbout.css */
+.about-heading {
+    margin-top: 50px; 
+    text-align: center;
+  }
+  
+  .about-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .row{
+
+    margin-top: 20px;
+  }
+  .about-box h3 {
+    color: #333;
+  }
+  
+  .about-box p {
+    color: #666;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .about-row {
+      flex-wrap: wrap;
+    }
+  
+    .about-box {
+      width: 100%;
+    }
+  }
+  

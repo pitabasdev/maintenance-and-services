@@ -1,0 +1,24 @@
+.custom-navbar {
+
+    padding-left: 20px;
+}
+
+.navbar-brand {
+    margin-right: auto;
+}
+
+.nav-link {
+    margin-left: 10px;
+}
+
+.dropdown-menu {
+    min-width: 150px;
+}
+.mr-auto{
+    margin-left: 20px;
+}
+.custom-navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
