@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 import "./Register.css"; // Import CSS file for styling
 
 function Register() {
@@ -49,11 +51,16 @@ function Register() {
         throw new Error("Registration failed.");
       }
 
+      NotificationManager.success('Registration successful! Please login.', 'Success', 2000);
       setName("");
       setEmail("");
       setPassword("");
       setConfirmPassword("");
       setError(null);
+      setTimeout(() => {
+        window.location.href = "/login"; // Redirect to login after successful registration
+      }, 2000); // 2000 milliseconds (2 seconds) delay before redirection
+
     } catch (error) {
       setError("Registration failed. Please try again later.");
     }
@@ -115,6 +122,7 @@ function Register() {
           Already have an account? <a href="/login">Login</a>
         </p>
       </form>
+      <NotificationContainer />
     </div>
   );
 }
