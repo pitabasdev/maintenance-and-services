@@ -6,6 +6,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -23,24 +24,46 @@ function Register() {
     setConfirmPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle registration logic here
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
-    // Reset form
-    setName("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+          confirmPassword,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Registration failed.");
+      }
+
+      setName("");
+      setEmail("");
+      setPassword("");
+      setConfirmPassword("");
+      setError(null);
+    } catch (error) {
+      setError("Registration failed. Please try again later.");
+    }
   };
 
   return (
     <div className="register-container">
       <form onSubmit={handleSubmit} className="register-form">
         <h2>Register</h2>
+        {error && <p className="error-message">{error}</p>}
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input

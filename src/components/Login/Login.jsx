@@ -25,7 +25,7 @@ function Login() {
 
   return (
     <>
-    <NavBar/>
+      <NavBar />
       <div className="login-container">
         <form onSubmit={handleSubmit} className="login-form">
           <h2>Login</h2>
@@ -59,7 +59,7 @@ function Login() {
           </p>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
