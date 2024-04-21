@@ -22,8 +22,6 @@ function NavBar() {
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="#services">Services</Nav.Link>
           <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
-
           <NavDropdown
             title="Dropdown"
             id="basic-nav-dropdown"

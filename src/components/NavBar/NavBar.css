@@ -22,6 +22,6 @@
     transition: box-shadow 0.3s ease-in-out;
   }
   .logo-img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px; 
+    height: auto; 
   }
