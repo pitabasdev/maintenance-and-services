@@ -5,6 +5,7 @@ import Hero from "./Hero/Hero";
 import Box from "./Box/Box";
 // import CustomersSlider from "./CustomersSlider/CustomersSlider";
 import HomeAbout from "./pages/HomeAbout";
+import Footer from "./pages/Footer/Footer";
 
 const TITLE = "Home || Page";
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Box />
       <HomeAbout/>
       {/* <CustomersSlider/> */}
+      <Footer/>
     </div>
   );
 }
