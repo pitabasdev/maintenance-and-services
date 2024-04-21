@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import "./NavBar.css"; // Import CSS file for styling
+import logo from "../assets/images/logo.png";
 
 function NavBar() {
   return (
@@ -12,7 +13,7 @@ function NavBar() {
       className="custom-navbar shadow-sm"
     >
       <Navbar.Brand href="#home" className="mr-auto">
-        Your Logo
+        <img src={logo} alt="logo" className="logo-img" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
