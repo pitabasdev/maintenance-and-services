@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import "./Login.css"; // Import CSS file for styling
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+import "react-notifications/lib/notifications.css";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../pages/Footer/Footer";
-
+import "./Login.css";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,12 +19,38 @@ function Login() {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Email:", email);
-    console.log("Password:", password);
-    setEmail("");
-    setPassword("");
+
+    try {
+      const response = await fetch("http://localhost:5000/signIn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Login failed.");
+      }
+
+      NotificationManager.success("Login successful!", "Success", 2000);
+      setEmail("");
+      setPassword("");
+      setTimeout(() => {
+        window.location.href = "/dashboard";
+      }, 2000);
+    } catch (error) {
+      NotificationManager.error(
+        "Login failed. Please try again.",
+        "Error",
+        2000
+      );
+    }
   };
 
   return (
@@ -60,6 +90,7 @@ function Login() {
         </form>
       </div>
       <Footer />
+      <NotificationContainer />
     </>
   );
 }
