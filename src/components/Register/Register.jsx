@@ -4,7 +4,7 @@ import {
   NotificationManager,
 } from "react-notifications";
 import "react-notifications/lib/notifications.css";
-import "./Register.css"; // Import CSS file for styling
+import "./Register.css"; 
 import NavBar from "../NavBar/NavBar";
 import Footer from "../pages/Footer/Footer";
 
@@ -67,8 +67,8 @@ function Register() {
       setConfirmPassword("");
       setError(null);
       setTimeout(() => {
-        window.location.href = "/login"; // Redirect to login after successful registration
-      }, 2000); // 2000 milliseconds (2 seconds) delay before redirection
+        window.location.href = "/login"; 
+      }, 2000); 
     } catch (error) {
       setError("Registration failed. Please try again later.");
     }

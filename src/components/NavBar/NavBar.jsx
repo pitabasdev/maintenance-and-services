@@ -45,9 +45,11 @@ function NavBar() {
             >
               Get Started
             </Button>
-            <Button variant="outline-success" className="mr-2">
-              Contact
-            </Button>
+            <a href="/contact">
+              <Button variant="outline-success" className="mr-2">
+                Contact
+              </Button>
+            </a>
           </div>
         </Nav>
       </Navbar.Collapse>

@@ -1,0 +1,47 @@
+/* ContactPage.css */
+
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form form {
+    width: 100%;
+  }
+  
+  .contact-form input[type='text'],
+  .contact-form input[type='email'],
+  .contact-form textarea {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form button[type='submit'] {
+    width: 100%;
+  }
+  
+  /* Hover effect for the placeholder image */
+  .left-side img {
+    transition: transform 0.3s ease;
+  }
+  
+  .left-side img:hover {
+    transform: scale(1.1);
+  }
+  
