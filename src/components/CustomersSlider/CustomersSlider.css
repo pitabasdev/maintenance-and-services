@@ -1,22 +1,22 @@
-
 .my-custom-container {
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
-  }
-  
-  .my-custom-heading {
-    margin-bottom: 20px;
-  }
-  
-  .my-custom-carousel {
-    width: 800px; 
-    margin: 0 auto; 
-  }
-  
-  .my-custom-carousel img {
-    max-height: 400px;
-    width: auto;
-    margin: auto;
-  }
-  
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.my-custom-heading {
+  margin-bottom: 20px;
+}
+
+/* Update carousel width to be responsive */
+.my-custom-carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Make carousel images responsive */
+.my-custom-carousel img {
+  max-width: 100%;
+  height: auto;
+}
