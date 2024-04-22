@@ -4,6 +4,9 @@ import "./Image.css"; // Import custom CSS file
 import ac from "../../assets/images/acservices.jpg"
 import fridge from "../../assets/images/fridge.jpg"
 import fridge2 from "../../assets/images/fridge2.jpg"
+import wiring from "../../assets/images/wiring.jpg"
+import cooler from "../../assets/images/cooler.jpg"
+import cooler2 from "../../assets/images/cooler2.png"
 
 const Image = () => {
   // Placeholder images
@@ -11,9 +14,9 @@ const Image = () => {
     { src: ac, alt: "Image 1" },
     { src: fridge, alt: "Image 2" },
     { src: fridge2, alt: "Image 3" },
-    { src: "https://via.placeholder.com/250x400", alt: "Image 4" },
-    { src: "https://via.placeholder.com/350x150", alt: "Image 5" },
-    { src: "https://via.placeholder.com/150x350", alt: "Image 6" },
+    { src: wiring, alt: "Image 4" },
+    { src: cooler, alt: "Image 5" },
+    { src: cooler2, alt: "Image 6" },
     { src: "https://via.placeholder.com/200x200", alt: "Image 7" },
     { src: "https://via.placeholder.com/250x250", alt: "Image 8" },
     { src: "https://via.placeholder.com/300x300", alt: "Image 9" },
