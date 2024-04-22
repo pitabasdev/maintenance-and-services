@@ -5,6 +5,9 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Dashboard from "./components/Dashboard";
 import Contact from "./components/pages/contact/Contact";
+import ProductCard from "./components/Services/ProductCard ";
+
+
 function App() {
   return (
     <div>
@@ -15,6 +18,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<ProductCard />} />
         </Routes>
       </BrowserRouter>
     </div>

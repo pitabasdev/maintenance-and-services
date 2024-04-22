@@ -1,11 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { NotificationManager } from "react-notifications";
 import "./Contact.css";
-import image1 from "../../assets/12981629_5118756-removebg-preview.png"
+import image1 from "../../assets/12981629_5118756-removebg-preview.png";
 import NavBar from "../../NavBar/NavBar";
 import Footer from "../../pages/Footer/Footer";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message.");
+      }
+
+      NotificationManager.success("Message sent successfully!", "Success", 2000);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      NotificationManager.error("Failed to send message.", "Error", 2000);
+    }
+  };
+
   return (
     <>
       <NavBar />
@@ -18,14 +64,26 @@ const Contact = () => {
           <Col md={6} className="right-side">
             <div className="contact-form">
               <h2>Contact Us</h2>
-              <Form>
+              <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formName">
                   <Form.Label>Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter your name" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your name"
+                    value={name}
+                    onChange={handleNameChange}
+                    required
+                  />
                 </Form.Group>
                 <Form.Group controlId="formEmail">
                   <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="Enter your email" />
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    required
+                  />
                 </Form.Group>
                 <Form.Group controlId="formMessage">
                   <Form.Label>Message</Form.Label>
@@ -33,6 +91,9 @@ const Contact = () => {
                     as="textarea"
                     rows={3}
                     placeholder="Enter your message"
+                    value={message}
+                    onChange={handleMessageChange}
+                    required
                   />
                 </Form.Group>
                 <Button variant="primary" type="submit">

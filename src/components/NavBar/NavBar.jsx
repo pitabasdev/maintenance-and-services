@@ -20,7 +20,7 @@ function NavBar() {
         <Nav className="ml-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="#services">Services</Nav.Link>
+          <Nav.Link href="/services">Services</Nav.Link>
           <Nav.Link href="#about">About</Nav.Link>
           <NavDropdown
             title="Dropdown"
