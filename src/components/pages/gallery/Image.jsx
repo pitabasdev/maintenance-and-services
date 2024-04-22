@@ -7,6 +7,7 @@ import fridge2 from "../../assets/images/fridge2.jpg"
 import wiring from "../../assets/images/wiring.jpg"
 import cooler from "../../assets/images/cooler.jpg"
 import cooler2 from "../../assets/images/cooler2.png"
+import wasing from "../../assets/images/washing.jpg"
 
 const Image = () => {
   // Placeholder images
@@ -17,7 +18,7 @@ const Image = () => {
     { src: wiring, alt: "Image 4" },
     { src: cooler, alt: "Image 5" },
     { src: cooler2, alt: "Image 6" },
-    { src: "https://via.placeholder.com/200x200", alt: "Image 7" },
+    { src: wasing, alt: "Image 7" },
     { src: "https://via.placeholder.com/250x250", alt: "Image 8" },
     { src: "https://via.placeholder.com/300x300", alt: "Image 9" },
     { src: "https://via.placeholder.com/350x350", alt: "Image 10" },
