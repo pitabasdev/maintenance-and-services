@@ -6,7 +6,9 @@ import {
 import "react-notifications/lib/notifications.css";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../pages/Footer/Footer";
+import { Helmet } from "react-helmet";
 import "./Login.css";
+const TITLE = "Login || Page";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -55,6 +57,10 @@ function Login() {
 
   return (
     <>
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
+
       <NavBar />
       <div className="login-container">
         <form onSubmit={handleSubmit} className="login-form">
