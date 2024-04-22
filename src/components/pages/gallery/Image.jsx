@@ -8,6 +8,9 @@ import wiring from "../../assets/images/wiring.jpg"
 import cooler from "../../assets/images/cooler.jpg"
 import cooler2 from "../../assets/images/cooler2.png"
 import wasing from "../../assets/images/washing.jpg"
+import man from "../../assets/images/man-electrical-technician-working-switchboard-with-fuses.jpg"
+import medium from "../../assets/images/medium-shot-people-wearing-helmets.jpg"
+
 
 const Image = () => {
   // Placeholder images
@@ -19,8 +22,8 @@ const Image = () => {
     { src: cooler, alt: "Image 5" },
     { src: cooler2, alt: "Image 6" },
     { src: wasing, alt: "Image 7" },
-    { src: "https://via.placeholder.com/250x250", alt: "Image 8" },
-    { src: "https://via.placeholder.com/300x300", alt: "Image 9" },
+    { src: man, alt: "Image 8" },
+    { src: medium, alt: "Image 9" },
     { src: "https://via.placeholder.com/350x350", alt: "Image 10" },
     { src: "https://via.placeholder.com/300x300", alt: "Image 11" },
     { src: "https://via.placeholder.com/350x350", alt: "Image 12" },
