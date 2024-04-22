@@ -6,6 +6,7 @@ import Box from "./Box/Box";
 import CustomersSlider from "./CustomersSlider/CustomersSlider";
 import HomeAbout from "./pages/HomeAbout";
 import Footer from "./pages/Footer/Footer";
+import Image from "./pages/gallery/Image";
 
 const TITLE = "Home || Page";
 export default function Home() {
@@ -17,9 +18,10 @@ export default function Home() {
       <NavBar />
       <Hero />
       <Box />
-      <HomeAbout/>
-      <CustomersSlider/>
-      <Footer/>
+      <HomeAbout />
+      <CustomersSlider />
+      <Image />
+      <Footer />
     </div>
   );
 }
