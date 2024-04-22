@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Image.css"; // Import custom CSS file
+import ac from "../../assets/images/acservices.jpg"
+import fridge from "../../assets/images/fridge.jpg"
+import fridge2 from "../../assets/images/fridge2.jpg"
 
 const Image = () => {
   // Placeholder images
   const images = [
-    { src: "https://via.placeholder.com/300x200", alt: "Image 1" },
-    { src: "https://via.placeholder.com/200x300", alt: "Image 2" },
-    { src: "https://via.placeholder.com/400x250", alt: "Image 3" },
+    { src: ac, alt: "Image 1" },
+    { src: fridge, alt: "Image 2" },
+    { src: fridge2, alt: "Image 3" },
     { src: "https://via.placeholder.com/250x400", alt: "Image 4" },
     { src: "https://via.placeholder.com/350x150", alt: "Image 5" },
     { src: "https://via.placeholder.com/150x350", alt: "Image 6" },
