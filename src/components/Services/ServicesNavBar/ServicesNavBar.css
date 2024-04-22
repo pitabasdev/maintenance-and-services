@@ -1,0 +1,62 @@
+.custom-navbar {
+    padding: 10px 20px;
+  }
+  
+  .logo-img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .nav-link {
+    font-size: 18px; /* Adjust the font size for the nav links */
+  }
+  
+  .navbar-toggler {
+    order: 1;
+  }
+  
+  .navbar-collapse {
+    order: 3;
+  }
+  
+  .profile-icon-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-icon {
+    cursor: pointer;
+    width: 50px; /* Increase the width of the profile icon */
+    height: auto; /* Adjust the height accordingly */
+    margin-right: 30px; /* Add some margin to the right of the profile icon */
+  }
+  
+  .user-details {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .user-details p {
+    margin: 10px 0;
+  }
+  
+  .user-details button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-navbar {
+      padding: 10px;
+    }
+  }
+  

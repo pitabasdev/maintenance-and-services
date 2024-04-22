@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import placeholderImage from "../assets/image2.jpg";
-import "./ProductCard .css"
+import "./ProductCard .css";
+import ServicesNavBar from "./ServicesNavBar/ServicesNavBar";
 
 const ProductCard = () => {
   const [services, setServices] = useState([]);
@@ -14,23 +15,26 @@ const ProductCard = () => {
   }, []);
 
   return (
-    <Container>
-      <Row>
-        {services.map((service, index) => (
-          <Col key={index} md={4}>
-            <Card className="product-card">
-              <Card.Img variant="top" src={placeholderImage} />
-              <Card.Body>
-                <Card.Title>{service.name}</Card.Title>
-                <Card.Text>{service.description}</Card.Text>
-                <Card.Text>Price: ${service.price}</Card.Text>
-                <Button variant="primary">Read More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <>
+    <ServicesNavBar/>
+      <Container>
+        <Row>
+          {services.map((service, index) => (
+            <Col key={index} md={4}>
+              <Card className="product-card">
+                <Card.Img variant="top" src={placeholderImage} />
+                <Card.Body>
+                  <Card.Title>{service.name}</Card.Title>
+                  <Card.Text>{service.description}</Card.Text>
+                  <Card.Text>Price: ${service.price}</Card.Text>
+                  <Button variant="primary">Read More</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </>
   );
 };
 
