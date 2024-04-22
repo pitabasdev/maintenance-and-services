@@ -44,6 +44,7 @@ const Contact = () => {
         </Row>
       </Container>
       {/* Google Maps Embed */}
+      <h1>Our Location</h1>
       <iframe
         title="Google Maps Embed"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.011302222768!2d85.86451921459713!3d20.296095086392108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a9e5dc0d30d3%3A0x1f8cf3ed1bebccf2!2sBhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1647921090772!5m2!1sen!2sin"
