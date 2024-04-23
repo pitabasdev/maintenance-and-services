@@ -25,7 +25,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/signIn", {
+      const response = await fetch("https://maintenance-and-services-backend.onrender.com/signIn", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +44,7 @@ function Login() {
       setEmail("");
       setPassword("");
       setTimeout(() => {
-        window.location.href = "/dashboard";
+        window.location.href = "/services";
       }, 2000);
     } catch (error) {
       NotificationManager.error(

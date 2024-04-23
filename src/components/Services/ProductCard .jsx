@@ -3,12 +3,13 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import placeholderImage from "../assets/image2.jpg";
 import "./ProductCard .css";
 import ServicesNavBar from "./ServicesNavBar/ServicesNavBar";
+import Footer from "../pages/Footer/Footer";
 
 const ProductCard = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/getAllSerices")
+    fetch("https://maintenance-and-services-backend.onrender.com/getAllSerices")
       .then((response) => response.json())
       .then((data) => setServices(data))
       .catch((error) => console.error("Error fetching services:", error));
@@ -34,6 +35,7 @@ const ProductCard = () => {
           ))}
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 };
