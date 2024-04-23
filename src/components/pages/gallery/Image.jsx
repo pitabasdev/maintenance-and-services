@@ -10,6 +10,9 @@ import cooler2 from "../../assets/images/cooler2.png"
 import wasing from "../../assets/images/washing.jpg"
 import man from "../../assets/images/man-electrical-technician-working-switchboard-with-fuses.jpg"
 import medium from "../../assets/images/medium-shot-people-wearing-helmets.jpg"
+import ece from "../../assets/images/ece.jpg"
+import fridge3 from "../../assets/images/fridge3.jpg"
+import windowAc from "../../assets/images/window-ac-repairing.jpg"
 
 
 const Image = () => {
@@ -24,9 +27,9 @@ const Image = () => {
     { src: wasing, alt: "Image 7" },
     { src: man, alt: "Image 8" },
     { src: medium, alt: "Image 9" },
-    { src: "https://via.placeholder.com/350x350", alt: "Image 10" },
-    { src: "https://via.placeholder.com/300x300", alt: "Image 11" },
-    { src: "https://via.placeholder.com/350x350", alt: "Image 12" },
+    { src: ece, alt: "Image 10" },
+    { src: fridge3, alt: "Image 11" },
+    { src: windowAc, alt: "Image 12" },
   ];
 
   return (
